@@ -1,0 +1,35 @@
+# ──────────────────────────────────────────────────────────────
+# Weather ETL – City & API configuration
+# ──────────────────────────────────────────────────────────────
+
+api:
+  base_url: "https://api.open-meteo.com/v1/forecast"
+  timeout_seconds: 10
+  max_retries: 3
+  backoff_factor: 2          # exponential back-off multiplier
+  current_weather: true
+
+cities:
+  - name: Paris
+    latitude: 48.8566
+    longitude: 2.3522
+
+  - name: Marseille
+    latitude: 43.2965
+    longitude: 5.3698
+
+  - name: Strasbourg
+    latitude: 48.5734
+    longitude: 7.7521
+
+  - name: Lyon
+    latitude: 45.7640
+    longitude: 4.8357
+
+paths:
+  data_dir: "data"
+  log_dir: "logs"
+  database: "data/weather.db"
+
+schedule:
+  interval_minutes: 60       # how often the pipeline runs
