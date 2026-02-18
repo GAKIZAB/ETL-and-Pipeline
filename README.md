@@ -178,7 +178,3 @@ Instead of `--schedule`, add a system cron entry:
 ```
 
 ---
-
-## 📝 License
-
-This project is provided for educational and internal use.
